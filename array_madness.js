@@ -10,6 +10,16 @@ arrayMadness([4, 5, 6], [1, 2, 3]); // returns true since 4 ** 2 + 5 ** 2 + 6 **
 Get your timer out. Are you ready? Ready, get set, GO!!!
 */
 
-function arrayMadness(a, b) {
-  // Ready, get set, GO!!!
+const arrayMadness = (a, b) => {
+  let sumA = 0;
+  let sumB = 0;
+
+  for(let i = 0; i < a.length; i++) {
+    sumA += (a[i] * a[i]);
+  }
+  for(let h = 0; h < b.length; h++) {
+    sumB += (b[h] * b[h] * b[h]);
+  }
+
+  return sumA > sumB;
 }
